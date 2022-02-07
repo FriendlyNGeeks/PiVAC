@@ -18,9 +18,8 @@ class SECRETS:
 ```
 
 ## Configuration LOW,MED,HIGH tempatures
+- fetchTemps.py
 ```
-fetchTemps.py
-  
   def get_Color(temp, fan):
     if temp > 59:
         # set fan(x) to HIGH
@@ -40,13 +39,12 @@ fetchTemps.py
 ```
 
 ## Add additional code for more server temps in this file
+- rgb_minipitftstats.py & fetchTemps.py
 ```
-rgb_minipitftstats.py & fetchTemps.py
 ```
 
 ## Add additional channels for more fan zones this file
+- fetchFans.py
 ```
-fetchFans.py
-
   fan_channel_array = [7, 11, 15]
 ```
