@@ -7,7 +7,8 @@ Inspired from the [Raspberry Pi Server Mark III](https://uplab.pro/2020/12/raspb
 
 To edit your server urls, add configure `secrets.py `:
 
-```secrets.py
+```
+secrets.py
 # Stored in seperate file
 
 class SECRETS:
@@ -17,7 +18,8 @@ class SECRETS:
 ```
 
 ## Configuration LOW,MED,HIGH tempatures
-```fetchTemps.py
+```
+fetchTemps.py
   
   def get_Color(temp, fan):
     if temp > 59:
@@ -38,11 +40,13 @@ class SECRETS:
 ```
 
 ## Add additional code for more server temps in this file
-```rgb_minipitftstats.py & fetchTemps.py
+```
+rgb_minipitftstats.py & fetchTemps.py
 ```
 
 ## Add additional channels for more fan zones this file
-```fetchFans.py
+```
+fetchFans.py
 
   fan_channel_array = [7, 11, 15]
 ```
