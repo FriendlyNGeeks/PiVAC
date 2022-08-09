@@ -4,7 +4,7 @@
 import time
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-hostName = "localhost"
+hostName = "0.0.0.0"
 serverPort = 80
 
 class MyServer(BaseHTTPRequestHandler):
