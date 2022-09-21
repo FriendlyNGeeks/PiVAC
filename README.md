@@ -23,9 +23,9 @@
   <a href="https://gitter.im/homer-dashboard/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img
   alt="Gitter chat"
   src="https://badges.gitter.im/homer-dashboard/community.svg"></a>
-  <a href="https://github.com/bastienwirtz/homer/releases/latest/download/homer.zip"><img
-  alt="Download PIVAC build"
-  src="https://img.shields.io/badge/Download-homer.zip-orange"></a>
+  <a href="https://github.com/friendlyngeeks/pivac/releases/latest/download/homer.zip"><img
+  alt="Download PIVAC"
+  src="https://img.shields.io/badge/Download-pivac.zip-orange"></a>
  <a href="https://github.com/awesome-selfhosted/awesome-selfhosted"><img
   alt="Awesome"
   src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"></a>
