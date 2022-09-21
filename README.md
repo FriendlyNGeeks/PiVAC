@@ -8,7 +8,7 @@
 </h1>
 
 <h4 align="center">
- A dead simple static <strong>HOM</strong>epage for your serv<strong>ER</strong> to keep your services on hand, from a simple <code>yaml</code> configuration file.
+ An attempt to make a <strong>Low Cost "3D" printed</strong> cooling solution for raspberry pis in network racks. Powered by Raspberry Pi Zero 2W over POE.
 </h4>
 
 <p align="center">
