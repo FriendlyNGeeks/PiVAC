@@ -32,7 +32,7 @@
 </p>
 
 <p align="center">
- <img src="https://raw.githubusercontent.com//friendlyngeeks/pivac/public/dashjson_screenshot.png" width="100%"  alt="json API">
+ <img src="https://raw.githubusercontent.com//friendlyngeeks/pivac/main/public/dashjson_screenshot.png" width="100%"  alt="json API">
 </p>
 
 ## Table of Contents
