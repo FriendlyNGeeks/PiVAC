@@ -85,7 +85,7 @@ Advise you use both the HOSTNAME and IP address for each setup as sometimes loca
     }
 ]}
 ```
-## Automount
+## Auto Mount
 
 - automount
 ```automount.sh
