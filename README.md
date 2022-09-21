@@ -2,7 +2,7 @@
  <img
   width="180"
   alt="json API"
-  src="https://raw.githubusercontent.com//friendlyngeeks/pivac/public/dashjson_screenshot.png">
+  src="https://raw.githubusercontent.com//friendlyngeeks/pivac/public/pivac_logo.png">
     <br/>
     PiVAC
 </h1>
