@@ -23,7 +23,7 @@
   <a href="https://discord.gg/eNKquhG" target="_blank"><img
   alt="Discord chat"
   src="https://img.shields.io/discord/324774009847808000?color=%235865f2&label=Discord&style=flat"></a>
-  <a href="https://github.com/friendlyngeeks/pivac/releases/latest/download/homer.zip" target="_blank"><img
+  <a href="https://github.com/FriendlyNGeeks/PiVAC/archive/refs/tags/pivac.zip" target="_blank"><img
   alt="Download PIVAC"
   src="https://img.shields.io/badge/Download-pivac.zip-orange"></a>
  <a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank"><img
