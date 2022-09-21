@@ -1,4 +1,49 @@
-# PiVAC
+<h1 align="center">
+ <img
+  width="180"
+  alt="json API"
+  src="https://raw.githubusercontent.com//friendlyngeeks/pivac/public/dashjson_screenshot.png">
+    <br/>
+    PiVAC
+</h1>
+
+<h4 align="center">
+ A dead simple static <strong>HOM</strong>epage for your serv<strong>ER</strong> to keep your services on hand, from a simple <code>yaml</code> configuration file.
+</h4>
+
+<p align="center">
+ <strong>
+  <a href="#getting-started">Getting started</a>
+ </strong>
+</p>
+<p align="center">
+ <a href="https://opensource.org/licenses/Apache-2.0"><img
+  alt="License: Apache 2"
+  src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"></a>
+  <a href="https://gitter.im/homer-dashboard/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img
+  alt="Gitter chat"
+  src="https://badges.gitter.im/homer-dashboard/community.svg"></a>
+  <a href="https://github.com/bastienwirtz/homer/releases/latest/download/homer.zip"><img
+  alt="Download PIVAC build"
+  src="https://img.shields.io/badge/Download-homer.zip-orange"></a>
+ <a href="https://github.com/awesome-selfhosted/awesome-selfhosted"><img
+  alt="Awesome"
+  src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"></a>
+</p>
+
+<p align="center">
+ <img src="https://raw.githubusercontent.com//friendlyngeeks/pivac/public/dashjson_screenshot.png" width="100%"  alt="json API">
+</p>
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Configuration](#configuration)
+- [Auto Mount](#auto-mount)
+- [Service Setup](#service)
+- [Fan Temps/Colors](#temps-colors)
+
+## Getting Started
 Raspberry Pi Ventilation and Air Conditioning
 
 Inspired from the [Raspberry Pi Server Mark III](https://uplab.pro/2020/12/raspberry-pi-server-mark-iii/) created by [Ivan Kuleshov](https://twitter.com/Merocle) at [UpLab](https://uplab.pro) and [Waveshare POE Hat](https://www.waveshare.com/poe-eth-usb-hub-hat.htm) using an Python sample code from [Adafruit](https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi). We have a "Multi-Threaded" python script that runs both; A basic json API status response server on port 80 and a fetch prometheus query for Raspberry Pi temps. Main branch had raw secrets file and no error handling and two seperate services. 2.0 fixes most of all these issues along with allowing for a remote_config or default_config fallback.
@@ -40,7 +85,7 @@ Advise you use both the HOSTNAME and IP address for each setup as sometimes loca
     }
 ]}
 ```
-## Add remote_config file auto mount to local path or copy to http
+## Automount
 
 - automount
 ```automount.sh
@@ -50,7 +95,7 @@ Advise you use both the HOSTNAME and IP address for each setup as sometimes loca
   //192.168.x.xxx/dev/RASPBERRY/PiVAC /home/pi/mnt cifs user=JANE,pass=XXXXX 0 0
 ```
 
-## Install PIVAC service to run at startup
+## Service
 
 - pivac.service
 ```service.sh
@@ -60,7 +105,7 @@ Advise you use both the HOSTNAME and IP address for each setup as sometimes loca
   sudo systemctl start pivac.service
 ```
 
-## Configuration LOW,MED,HIGH tempatures
+## Temps-Colors
 
 - fetchTemps.py
 ```fetchTemps.py
