@@ -20,7 +20,7 @@
  <a href="https://opensource.org/licenses/Apache-2.0"><img
   alt="License: Apache 2"
   src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"></a>
-  <a href="https://gitter.im/homer-dashboard/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img
+  <a href="https://discord.gg/eNKquhG"><img
   alt="Discord chat"
   src="https://img.shields.io/discord/324774009847808000?color=%235865f2&label=Discord&style=flat"></a>
   <a href="https://github.com/friendlyngeeks/pivac/releases/latest/download/homer.zip"><img
