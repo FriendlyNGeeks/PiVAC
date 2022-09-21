@@ -8,7 +8,7 @@
 </h1>
 
 <h4 align="center">
- A dead simple static <strong>HOM</strong>epage for your serv<strong>ER</strong> to keep your services on hand, from a simple <code>yaml</code> configuration file.
+ An attempt to make a <strong>Low Cost "3D" printed</strong> cooling solution for raspberry pis in network racks. Powered by Raspberry Pi Zero 2W over POE.
 </h4>
 
 <p align="center">
@@ -17,22 +17,26 @@
  </strong>
 </p>
 <p align="center">
- <a href="https://opensource.org/licenses/Apache-2.0"><img
+ <a href="https://opensource.org/licenses/Apache-2.0" target="_blank"><img
   alt="License: Apache 2"
   src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"></a>
-  <a href="https://gitter.im/homer-dashboard/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img
-  alt="Gitter chat"
-  src="https://badges.gitter.im/homer-dashboard/community.svg"></a>
-  <a href="https://github.com/bastienwirtz/homer/releases/latest/download/homer.zip"><img
-  alt="Download PIVAC build"
-  src="https://img.shields.io/badge/Download-homer.zip-orange"></a>
- <a href="https://github.com/awesome-selfhosted/awesome-selfhosted"><img
+  <a href="https://discord.gg/eNKquhG" target="_blank"><img
+  alt="Discord chat"
+  src="https://img.shields.io/discord/324774009847808000?color=%235865f2&label=Discord&style=flat"></a>
+  <a href="https://github.com/friendlyngeeks/pivac/releases/latest/download/homer.zip" target="_blank"><img
+  alt="Download PIVAC"
+  src="https://img.shields.io/badge/Download-pivac.zip-orange"></a>
+ <a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank"><img
   alt="Awesome"
   src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"></a>
 </p>
 
 <p align="center">
+<<<<<<< HEAD
  <img src="https://raw.githubusercontent.com//friendlyngeeks/pivac/main/public/dashjson_screenshot.png" width="100%"  alt="json API">
+=======
+ <img src="https://github.com/FriendlyNGeeks/PiVAC/raw/main/public/dashjson_screenshot.png" width="100%"  alt="json API">
+>>>>>>> 51d283805cfa18c1417523d87eeda9482e25e063
 </p>
 
 ## Table of Contents
