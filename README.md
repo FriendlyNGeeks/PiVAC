@@ -32,11 +32,10 @@
 </p>
 
 <p align="center">
-<<<<<<< HEAD
  <img src="https://raw.githubusercontent.com//friendlyngeeks/pivac/main/public/dashjson_screenshot.png" width="100%"  alt="json API">
-=======
- <img src="https://github.com/FriendlyNGeeks/PiVAC/raw/main/public/dashjson_screenshot.png" width="100%"  alt="json API">
->>>>>>> 51d283805cfa18c1417523d87eeda9482e25e063
+ <img src="https://raw.githubusercontent.com//friendlyngeeks/pivac/main/public/deploy_screenshot.png" width="100%"  alt="json API">
+ <img src="https://raw.githubusercontent.com//friendlyngeeks/pivac/main/public/display_screenshot.png" width="100%"  alt="json API">
+ <img src="https://raw.githubusercontent.com//friendlyngeeks/pivac/main/public/assemble_screenshot.png" width="100%"  alt="json API">
 </p>
 
 ## Table of Contents
