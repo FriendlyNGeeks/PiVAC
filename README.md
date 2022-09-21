@@ -17,16 +17,16 @@
  </strong>
 </p>
 <p align="center">
- <a href="https://opensource.org/licenses/Apache-2.0"><img
+ <a href="https://opensource.org/licenses/Apache-2.0" target="_blank"><img
   alt="License: Apache 2"
   src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"></a>
-  <a href="https://discord.gg/eNKquhG"><img
+  <a href="https://discord.gg/eNKquhG" target="_blank"><img
   alt="Discord chat"
   src="https://img.shields.io/discord/324774009847808000?color=%235865f2&label=Discord&style=flat"></a>
-  <a href="https://github.com/friendlyngeeks/pivac/releases/latest/download/homer.zip"><img
+  <a href="https://github.com/friendlyngeeks/pivac/releases/latest/download/homer.zip" target="_blank"><img
   alt="Download PIVAC"
   src="https://img.shields.io/badge/Download-pivac.zip-orange"></a>
- <a href="https://github.com/awesome-selfhosted/awesome-selfhosted"><img
+ <a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank"><img
   alt="Awesome"
   src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"></a>
 </p>
