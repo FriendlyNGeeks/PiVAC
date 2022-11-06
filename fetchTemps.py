@@ -56,7 +56,7 @@ def get_Color(temp, fan):
         fetchFans.set_Fan_Speed(fan, 100, "HIGH")
         # temp red
         return "#00FF00"
-    elif temp > 40 and temp <= 58:
+    elif temp > 50 and temp <= 59:
         # set fan(x) to MED
         fetchFans.set_Fan_Speed(fan, 75, "MED")
         fetchFans.set_Fan_Speed(0, 75, "MED")
