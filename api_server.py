@@ -11,17 +11,20 @@ server_address = ('0.0.0.0', 80)
 class MyServer(BaseHTTPRequestHandler):
     
     def do_GET(self):
-        jData = json.loads(os.environ.get('jsonData').replace("\'", "\""))
-        self.send_response(200)
-        self.send_header("Content-type", "application/json")
-        self.end_headers()
-        test = str(jData)
-        self.wfile.write(bytes(test.replace("\'", "\""), "utf-8"))
-        # self.wfile.write(bytes("<html><head><title>https://pythonbasics.org</title></head>", "utf-8"))
-        # self.wfile.write(bytes("<p>Request: %s</p>" % self.path, "utf-8"))
-        # self.wfile.write(bytes("<body>", "utf-8"))
-        # self.wfile.write(bytes("<p>"+jsonString+"</p>", "utf-8"))
-        # self.wfile.write(bytes("</body></html>", "utf-8"))
+        if os.environ.get('jsonData') != "null":
+            jData = json.loads(os.environ.get('jsonData').replace("\'", "\""))
+            self.send_response(200)
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            payload = str(jData)
+            self.wfile.write(bytes(payload.replace("\'", "\""), "utf-8"))
+        else:
+            self.send_response(200)
+            self.wfile.write(bytes("<html><head><title>PiVAC SERVER API</title></head>", "utf-8"))
+            self.wfile.write(bytes("<p>Request: %s</p>" % self.path, "utf-8"))
+            self.wfile.write(bytes("<body>", "utf-8"))
+            self.wfile.write(bytes("<p>Payload has not yet been loaded or can not be found. Please try again later or contact support</p>", "utf-8"))
+            self.wfile.write(bytes("</body></html>", "utf-8"))
 
 class startApi():
     def start():
