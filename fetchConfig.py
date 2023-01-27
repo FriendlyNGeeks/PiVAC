@@ -4,7 +4,7 @@ def fetch_Settings():
 	#stored in project directory
 	default_config = 'default_config.json'
 	#set UNC path after auto mount is established
-	remote_config = '/home/pi/mnt/config.json'
+	remote_config = '/usr/local/share/remote_config.json'
 	#set for if statement
 	fetchConfig = "null"
 
