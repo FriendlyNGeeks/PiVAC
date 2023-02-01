@@ -15,7 +15,7 @@
             {"URL":"http://peons.local:9090"},
             {"IP":"http://192.168.2.158:9090"}
             ],
-        "Fan":"null"
+        "Fan":7
     },
     {
         "Name": "ZEROSOL",
