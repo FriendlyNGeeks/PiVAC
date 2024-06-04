@@ -101,7 +101,7 @@ Advise you use both the HOSTNAME and IP address for each setup as sometimes loca
   sudo -s nano /etc/fstab         
   # add to bottom of file
   # network share mount
-  //192.168.x.xxx/dev/RASPBERRY/PiVAC /home/pi/mnt cifs user=JANE,pass=XXXXX 0 0
+  //192.168.x.xxx/dev/RASPBERRY/PiVAC /home/pi/mnt cifs username=JANE,password=XXXXX 0 0
 ```
 
 ## Service
