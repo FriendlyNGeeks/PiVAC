@@ -1,0 +1,9 @@
+[Unit]
+Description=100mb USB 2.0 (Realtek 8152B Chipset) Enabler - USB Mode Switcher
+ 
+[Service]
+ExecStart=/usr/local/bin/pivac/scripts/rtl8152_modeswitch.sh
+ 
+[Install]
+RequiredBy=local-fs.target
+WantedBy=multi-user.target

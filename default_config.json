@@ -1,0 +1,29 @@
+{"data":[
+    {
+        "Name": "WATCHTOWER",
+        "disName":"Watch",
+        "Address":[
+            {"URL":"http://watchtower.local:9090"},
+            {"IP":"http://192.168.2.151:9090"}
+            ],
+        "Fan":11
+    }, 
+    {
+        "Name": "PEONS",
+        "disName":"Peons",
+        "Address":[
+            {"URL":"http://peons.local:9090"},
+            {"IP":"http://192.168.2.158:9090"}
+            ],
+        "Fan":7
+    },
+    {
+        "Name": "ZEROSOL",
+        "disName":"0-Sol",
+        "Address":[
+            {"URL":"http://zerosol.local:9090"},
+            {"IP":"http://192.168.2.156:9090"}
+            ],
+        "Fan":15
+    }
+]}

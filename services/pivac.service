@@ -1,0 +1,11 @@
+[Unit]
+Description=HTTP response UptimeKuma and Prometheus json API
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/pivac/main.py
+WorkingDirectory=/usr/local/bin/pivac
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
