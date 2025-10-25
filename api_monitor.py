@@ -85,11 +85,11 @@ class monitor():
             self.draw.rectangle((0, 0, self.disp.width, self.disp.height), outline=0, fill=0)
 
             if self.buttonA.value and self.buttonB.value:
-                if lcdBacklight <= 0:
+                if self.lcdBacklight <= 0:
                     self.backlight.value = False  # turn off backlight
                     self.draw.rectangle((0, 0, self.disp.width, self.disp.height), outline=0, fill=0)
             if self.buttonB.value and not self.buttonA.value:  # just button A pressed
-                lcdBacklight = 5
+                self.lcdBacklight = 5
                 self.draw.rectangle((0, 0, self.disp.width, self.disp.height), outline=0, fill=0)
                 self.backlight.value = True
                 shutdown_eval = True
@@ -110,10 +110,10 @@ class monitor():
                 time.sleep(1)
                 os.system("sudo shutdown -h now")
             if self.buttonA.value and not self.buttonB.value:  # just button B pressed
-                lcdBacklight = 5
+                self.lcdBacklight = 5
                 self.backlight.value = True
             # Only FETCH temps once every 2 mins but keep updating screen for cpu/mem stats    
-            while getURL > 120:
+            while self.getURL > 120:
                 mainArray = []
                 protoArray = []
                 for i in range(len(self.mainConfig)):
@@ -150,7 +150,7 @@ class monitor():
                 print(dispArray)
                 
                 # init loop counter
-                getURL -= 1
+                self.getURL -= 1
 
             # Shell scripts for system monitoring from here:
             # https://unix.stackexchange.com/questions/119126/command-to-display-memory-usage-disk-usage-and-cpu-load
@@ -178,12 +178,12 @@ class monitor():
                 for i in range(len(dispArray)):
                     self.draw.text((self.x, y), dispArray[i], font=self.font, fill=mainArray[i][2])
                     y += self.font.getsize(dispArray[i])[1]
-                if getURL != 0:
-                    getURL -= 1
+                if self.getURL != 0:
+                    self.getURL -= 1
                 else:
-                    getURL = 121
+                    self.getURL = 121
             
-            lcdBacklight -= 1
+            self.lcdBacklight -= 1
 
             # Display image.
             if shutdown_eval == False:
