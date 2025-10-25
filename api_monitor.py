@@ -6,9 +6,9 @@
 # https://unix.stackexchange.com/questions/472950/systemd-status-203-exec-error-when-creating-new-service
 # https://raspberrypi.stackexchange.com/questions/96673/i-want-to-run-a-python-3-script-on-startup-and-in-an-endless-loop-on-my-raspberr
 
-import os # shutdown button
-import numpy # array to json mapping
-import time # loops sleep
+import os  # shutdown button
+import numpy  # array to json mapping
+import time  # loops sleep
 import subprocess
 import digitalio
 import board
@@ -16,6 +16,26 @@ from PIL import Image, ImageDraw, ImageFont
 from adafruit_rgb_display import st7789
 import fetchConfig
 import fetchTemps
+
+# --- Pillow 10 compatible text measurement helper ---
+def _measure_text(draw: ImageDraw.ImageDraw, font: ImageFont.FreeTypeFont, text: str):
+    """
+    Return (width, height) for `text` with the given `font`, compatible with Pillow >= 10.
+    Tries draw.textbbox -> font.getbbox -> draw.textsize (legacy).
+    """
+    try:
+        left, top, right, bottom = draw.textbbox((0, 0), text, font=font)
+        return (right - left, bottom - top)
+    except Exception:
+        pass
+    try:
+        left, top, right, bottom = font.getbbox(text)
+        return (right - left, bottom - top)
+    except Exception:
+        pass
+    # Legacy fallback (may be deprecated but still available in many builds)
+    return draw.textsize(text, font=font)
+
 
 # Config for display baudrate (default max is 24mhz):
 BAUDRATE = 64000000
@@ -99,7 +119,7 @@ class monitor():
                     y = self.top
                     shutdown_Text = "Shut Down"
                     self.draw.text((self.x, y), shutdown_Text, font=self.font, fill="#FFFFFF")
-                    y += self.font.getsize(shutdown_Text)[1]
+                    y += _measure_text(self.draw, self.font, shutdown_Text)[1]
                     self.draw.text((self.x, y), str(shutdown_init) + "s", font=self.font, fill="#FFFFFF")
                     self.disp.image(self.image, self.rotation)
                     time.sleep(1)
@@ -170,14 +190,14 @@ class monitor():
                 # Write four lines of text.
                 y = self.top
                 self.draw.text((self.x, y), IP.split(".")[1]+"."+IP.split(".")[2]+"."+IP.split(".")[3], font=self.font, fill="#FFFFFF")
-                y += self.font.getsize(IP)[1]
+                y += _measure_text(self.draw, self.font, IP)[1]
                 self.draw.text((self.x, y), CPU, font=self.font, fill="#808080")
-                y += self.font.getsize(CPU)[1]
+                y += _measure_text(self.draw, self.font, CPU)[1]
                 self.draw.text((self.x, y), "UT: " + UpTime, font=self.font, fill="#0000FF")
-                y += self.font.getsize(UpTime)[1]
+                y += _measure_text(self.draw, self.font, UpTime)[1]
                 for i in range(len(dispArray)):
                     self.draw.text((self.x, y), dispArray[i], font=self.font, fill=mainArray[i][2])
-                    y += self.font.getsize(dispArray[i])[1]
+                    y += _measure_text(self.draw, self.font, dispArray[i])[1]
                 if self.getURL != 0:
                     self.getURL -= 1
                 else:
@@ -190,4 +210,4 @@ class monitor():
                 self.disp.image(self.image, self.rotation)
             else:
                 self.draw.rectangle((0, 0, self.disp.width, self.disp.height), outline=0, fill=0)
-            time.sleep(1) # value in seconds
+            time.sleep(1)  # value in seconds
