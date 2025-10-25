@@ -92,7 +92,7 @@ class monitor():
                 self.lcdBacklight = 5
                 self.draw.rectangle((0, 0, self.disp.width, self.disp.height), outline=0, fill=0)
                 self.backlight.value = True
-                shutdown_eval = True
+                self.shutdown_eval = True
                 shutdown_init = 5
                 while shutdown_init >= 0:
                     self.draw.rectangle((0, 0, self.disp.width, self.disp.height), outline=0, fill=0)
@@ -166,7 +166,7 @@ class monitor():
             # cmd = "free -m | awk 'NR==2{printf \"Mem: %s/%s MB\", $3,$2,$3*100/$2 }'"
             # MemUsage = subprocess.check_output(cmd, shell=True).decode("utf-8")
 
-            if shutdown_eval != True:
+            if self.shutdown_eval != True:
                 # Write four lines of text.
                 y = self.top
                 self.draw.text((self.x, y), IP.split(".")[1]+"."+IP.split(".")[2]+"."+IP.split(".")[3], font=self.font, fill="#FFFFFF")
@@ -186,7 +186,7 @@ class monitor():
             self.lcdBacklight -= 1
 
             # Display image.
-            if shutdown_eval == False:
+            if self.shutdown_eval == False:
                 self.disp.image(self.image, self.rotation)
             else:
                 self.draw.rectangle((0, 0, self.disp.width, self.disp.height), outline=0, fill=0)
