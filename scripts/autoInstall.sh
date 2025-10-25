@@ -80,6 +80,10 @@ setupAutoMount() {
 }
 
 installDepends() {
+    # WORKAROUND GPIO 'busy' kernel since BOOKWORM CE0 SOURCE | https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/spi-sensors-devices
+    sudo pip3 install --upgrade adafruit-python-shell click
+    wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/main/raspi-spi-reassign.py
+    sudo -E env PATH=$PATH python3 /usr/local/bin/raspi-spi-reassign.py --ce0=5 --ce1=6
     # PRE-REQ
     echo "Installing prerequisites [pip,setuptools,adafruit-python-shell,adafruit-circuitpython-rgb-display,spidev,fonts-dejavu,python3-pil,python3-numpy,adafruit-circuitpython-pca9685]..."
     sudo apt-get install python3-pip -y
