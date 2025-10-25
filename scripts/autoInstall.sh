@@ -75,6 +75,7 @@ setupAutoMount() {
     read -p "Enter mount password: " mountPass < /dev/tty
     printf '# remote-config \n%s %s cifs user=%s,pass=%s 0 0\n' "$mountTarget" "$mountPoint" "$mountUser" "$mountPass" >> /etc/fstab
     sudo mount -a
+    sudo systemctl daemon-reload
     enableSPI
 }
 
