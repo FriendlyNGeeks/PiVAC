@@ -80,6 +80,8 @@ setupAutoMount() {
 }
 
 installDepends() {
+    # remove nag for externally-mannaged python
+    for d in /usr/lib/python3.*; do f="$d/EXTERNALLY-MANAGED"; [ -f "$f" ] && sudo rm -v "$f"; done
     # WORKAROUND GPIO 'busy' kernel since BOOKWORM CE0 SOURCE | https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/spi-sensors-devices
     sudo pip3 install --upgrade adafruit-python-shell click
     wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/main/raspi-spi-reassign.py
