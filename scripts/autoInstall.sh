@@ -171,7 +171,7 @@ done
 if [ "$usbModeSwitch" == "true" ]; then
   echo "Disabling wlan0 to allow mode switch..."
   sh -c "usb_modeswitch -v 0bda -p 8151 -M 555342430860d9a9c0000000800006e0000000000000000000000000000000"
-  sh -c "ip link set wlan0 down"
+  sh -c "nmcli radio wifi off"
 fi
 
 while true; do
